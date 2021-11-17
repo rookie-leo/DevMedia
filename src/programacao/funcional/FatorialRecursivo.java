@@ -4,18 +4,16 @@ public class FatorialRecursivo {
 
     public static void main(String[] args) {
 
-        long fatorial = 10;
-        int count = 1;
-        long resultado = 1;
+        System.out.println("Fatorial = " + fatorial(10));
 
-        while (count <= fatorial) {
-            resultado *= count;
+    }
 
-            count++;
+    public static long fatorial(final long num) {
+        if (num <= 1) {
+            return 1;
+        } else {
+            return fatorial(num - 1) * num;
         }
-
-        System.out.println("Fatorial = " + resultado);
-
     }
 
 }
